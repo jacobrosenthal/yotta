@@ -154,6 +154,7 @@ def main():
     addParser('clean', 'clean', 'Remove files created by yotta and the build.')
     addParser('config', 'config', 'Display the target configuration info.')
     addParser('shrinkwrap', 'shrinkwrap', 'Create a yotta-shrinkwrap.json file to freeze dependency versions.')
+    addParser('run', 'run', 'Run a user script defined in module.json.')
 
     # short synonyms, subparser.choices is a dictionary, so use update() to
     # merge in the keys from another dictionary

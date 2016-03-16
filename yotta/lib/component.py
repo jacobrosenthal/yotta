@@ -840,3 +840,11 @@ class Component(pack.Pack):
             return self.description['scripts']['testReporter']
         else:
             return None
+
+    def getScript(self, scriptname):
+        ''' return the specified script if one exists (possibly inherited from
+            a base target)
+        '''
+        if 'scripts' in self.description and scriptname in self.description['scripts']:
+            return self.description['scripts'][scriptname]
+        return None
