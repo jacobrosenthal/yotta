@@ -10,6 +10,7 @@ import os
 import subprocess
 import shlex
 import itertools
+import errno
 
 # Ordered JSON, , read & write json, internal
 from yotta.lib import ordered_json
