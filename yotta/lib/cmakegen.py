@@ -346,6 +346,7 @@ class CMakeGen(object):
             add_defs_header += "#define YOTTA_%s_VERSION_MAJOR %d\n" % (sanitizePreprocessorSymbol(dep.getName()), dep.getVersion().major())
             add_defs_header += "#define YOTTA_%s_VERSION_MINOR %d\n" % (sanitizePreprocessorSymbol(dep.getName()), dep.getVersion().minor())
             add_defs_header += "#define YOTTA_%s_VERSION_PATCH %d\n" % (sanitizePreprocessorSymbol(dep.getName()), dep.getVersion().patch())
+            add_defs_header += "#define YOTTA_NAME %d\n" % (sanitizePreprocessorSymbol(dep.getName()))
 
         # use -include <definitions header> instead of lots of separate
         # defines... this is compiler specific, but currently testing it
